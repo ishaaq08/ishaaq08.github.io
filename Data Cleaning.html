@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Data Cleaning</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Return to the home Page</a>
+					</header>
+
+				<!-- Nav 
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">This is Massively</a></li>
+							<li class="active"><a href="generic.html">Generic Page</a></li>
+							<li><a href="elements.html">Elements Reference</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+				-->
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<!-- <span class="date">April 25, 2017</span> -->
+									<h1>Data Cleaning in SQL Server</h1>
+									<p>Scroll down to the bottom of the page and select 'View Project Code' to view the SQL code on GitHub</p>
+								</header>
+								
+								<p> <h2><u><b>About the Data</b></u></h2>
+									The dataset to be cleaned was regarding Nashville Housing Data. It's raw format was an Excel file. The more relevant 
+									data can be summarised into 3 main categories: <b>Property Details</b> (build year, address, value, acreage etc), <b>Sales Details</b> (date of purchase, price) and 
+									<b>Owner Details </b>(name, address).<br><br>
+
+									<h2><u><b>Methodology</b></u></h2>
+									The steps for this project are outlined below, along with the SQL techniques utilised to carry out the data cleaning task :<br><br>
+									<b>1) Standardizing the Date Format</b>
+									<ul>
+										<li>DDL</li>
+										<li>DML</li>
+									</ul>
+									<b>2) Filling in Address Nulls</b>
+									<ul>
+										<li>Self joins</li>
+									</ul>
+									<b>3) Cleaning the Addresses</b>
+									<ul>
+										<li>String functions - CHARINDEX(), SUBSTRING(), REPLACE(), PARSENAME(), LEN(), LTRIM()</li>
+									</ul>
+									<b>4) Changing 'Y' and 'N' to 'Yes' and 'No' in the [Sold as Vacant] column</b>
+									<ul>
+										<li>CASE expression</li>
+									</ul>
+									<b> 5) Removing Duplicate Rows</b>
+									<ul>
+										<li>CTE's</li>
+										<li>Window functions</li>
+									</ul>
+									<b>6) Delete Unused Columns</b>
+									<ul>
+										<li>DDL</li>
+									</ul>
+								</p>
+
+								<ul class="actions special">
+									<li><a href="https://github.com/ishaaq08/Portfolio-Projects/blob/main/My%20Data%20Cleaning%20Script.sql" target="_blank" class="button large">View Project Code</a></li>
+								</ul>
+							</section>
+
+					</div>
+
+				<!-- Footer 
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+				-->
+
+				<!-- Copyright 
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+				-->
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
