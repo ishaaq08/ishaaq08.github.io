@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Data Exploration</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Return to the home Page</a>
+					</header>
+
+				<!-- Nav 
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">This is Massively</a></li>
+							<li class="active"><a href="generic.html">Generic Page</a></li>
+							<li><a href="elements.html">Elements Reference</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+				-->
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<!-- <span class="date">April 25, 2017</span> -->
+									<h1>Data Exploration in SQL Server</h1>
+									<p>Scroll down to the bottom of the page and select <b>'View Project Code'</b> to view the SQL code on GitHub</p>
+								</header>
+								<p> <h2><u><b>About the Data</b></u></h2>
+									The dataset explored was real-world COVID data - please <a href="https://ourworldindata.org/covid-deaths"><b>click here</b></a> to access the dataset.<br><br>
+
+
+									<h2><u><b>Methodology</b></u></h2>
+									Data exploration is the first step in data analysis in which the data is explored and visualised to uncover insights and to identify areas which could 
+									be further investigated. Starting the data analysis process with data exploration ensures the user can make better decisions and gives them a broader 
+									understanding of the dataset allowing them to ask more thoughtful questions. To learn about the Tableau project which was carried out in conjuction with 
+									this project to visualise findings, please <a href = "Tableau Viz.html"><b>click here.</b></a><br>
+
+									<br>The areas of exploration are listed below along with the associated SQL techniques that were used to gather the data - (NOTE: only the more advanced
+									SQL syntax used in the code is listed to display level of expertise. Where no items are listed assume basic DDL and/or DML) :<br><br>
+									<b>1) Total Cases vs Total Deaths - likelihood of dying if you contract the virus in your country</b><br><br>
+
+									<b>2) Total Cases vs Population - What percentage got COVID</b><br><br>
+
+									<b>3) Countries with the highest infection rate compared to population</b>
+									<ul>
+										<li>GROUP BY</li>
+										<li>ORDER BY</li>
+										<li>MAX()</li>
+									</ul>
+									<b>4) Countries with the highest death count per population</b>
+									<ul>
+										<li>MAX()</li>
+										<li>CAST()</li>
+										<li>ORDER BY</li>
+										<li>GROUP BY</li>
+									</ul>
+									<b> 5) Continents with the highest death count</b>
+									<ul>
+										<li>MAX()</li>
+										<li>CAST()</li>
+										<li>ORDER BY</li>
+										<li>GROUP BY</li>
+									</ul>
+									<b>6) Total number of deaths in each country</b>
+									<ul>
+										<li>MAX()</li>
+										<li>CAST()</li>
+										<li>SUM()</li>
+										<li>ORDER BY</li>
+										<li>GROUP BY</li>
+									</ul>
+									<b>7) Global numbers</b>
+									<ul>
+										<li>CAST()</li>
+										<li>SUM()</li>
+										<li>ORDER BY</li>
+										<li>GROUP BY</li>
+									</ul>
+									<b>8) Total Population vs Total Vaccination (% Vaccinated) - Total amount of people in the world that have been vaccinated</b>
+									<ul>
+										<li>JOIN</li>
+										<li>PARTITION BY()</li>
+										<li>MAX()</li>
+										<li>CAST()</li>
+										<li>CONVERT()</li>
+										<li>SUM()</li>
+										<li>ORDER BY</li>
+										<li>GROUP BY</li>
+									</ul>
+									<b> The following are alternative methods to achieve the same result set as 8. However, CTEs, Temp Tables and VIEWs are used to enable further querying of
+										the results set.<br><br>
+									</b>
+									<b>8a) % Vaccinated - CTE</b>
+									<ul>
+										<li>WITH - (for creation of CTE)</li>
+										<li>All items in 8</li>
+									</ul>
+									<b>8b) % Vaccinated - Temp Table</b>
+									<ul>
+										<li>INSERT INTO</li>
+										<li>CREATE TABLE</li>
+										<li>DROP TABLE IF EXISTS</li>
+										<li>All items in 8</li>
+									</ul>
+									<b>8c) % Vaccinated - VIEW</b>
+									<ul>
+										<li>CREATE VIEW</li>
+										<li>All items in 8</li>
+									</ul>
+								</p>
+
+								<ul class="actions special">
+									<li><a href="https://github.com/ishaaq08/Portfolio-Projects/blob/main/Data%20Exploration.sql" target="_blank" class="button large">View Project Code</a></li>
+								</ul>
+							</section>
+
+					</div>
+
+				<!-- Footer 
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+				-->
+
+				<!-- Copyright 
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+				-->
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

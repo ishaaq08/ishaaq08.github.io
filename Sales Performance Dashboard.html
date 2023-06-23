@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Sales Performance Dashboard</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Return to the home Page</a>
+					</header>
+
+				<!-- Nav 
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">This is Massively</a></li>
+							<li class="active"><a href="generic.html">Generic Page</a></li>
+							<li><a href="elements.html">Elements Reference</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+				-->
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+
+						
+
+							<section class="post">
+								<header class="major">
+									<!-- <span class="date">April 25, 2017</span> -->
+									<h1>Sales Performance Dashboard</h1>
+									<p>Scroll down to the bottom of the page and select <b>'View Power BI Dashboard'</b> to view the dashboard.</p>
+								</header>
+								<p> 
+									<h2><u>Important note</u></h2>
+									<b>As viewers of this website do not have editting permissions when viewing the dashboard (via the button below), you will not be able to change the 
+									parameter value and view the respective changes, as that requires having access to the dataaset. However, I have included a video at the bottom of the page to
+									 demonstrate this process.</b><br><br>
+
+									<h2><u><b>About the Data</b></u></h2>
+									The aim of this project was to demonstrate how Power BI (PBI) can dynamically integrate with databases. The database was created in MySQL and the SQL script to create the database 
+									was provided by <a href="https://chandoo.org/wp/learn-sql-for-data-analysis/"><b>Chandoo</b></a>. As this is not an SQL project, the SQL script to create the database will not be 
+									discussed, however the SQL query utilised in Power BI to extract the data will be covered. For non-experts <a href="https://1drv.ms/x/s!Ap0VfnfXGxKJlBtPSAtGYTYscSQn?e=Fd7jTD" target="blank">
+									<b> click here </b></a> to view the data in an Excel. <br><br>
+									
+									<h2><u><b>Methodology</b></u></h2>
+									<b>Data Extraction</b><br>
+									The PBI - MySQL connector was utilised to extract the data from the database with a simple SQL query featuring a join.
+									<br><br>
+									
+									<b>Building the Dashboard</b><br>
+									The data displayed on the dashboard along with the corresponding visualisations used is as follows:
+									<ul>
+										<li>Quarterly sales - Line chart</li>
+										<li>Sales by geography - Stacked bar chart </li>
+										<li>Total sales and boxes sold for each sales person - Table</li>
+										<li>Several general metrics - Cards</li>
+									</ul>
+
+									<b>Parametrizing the native database query</b><br>
+									The idea behind parametrizing the database query is to allow the user to refine the data to what they desire. One may ask - why can't all the data be extracted from 
+									the database and then filters can be applied to display the desired data. Although this is a feasible method, when dealing with large data sets it becomes 
+									inefficient for PBI to extract all of the data and only use some of it. Instead the efficiency of the process can be enhanced by only extracting the data that
+									the user requires. <br><br>
+
+									The first step in parametrizing the native database query was to create a parameter in Power BI. The parameter was called 'Product', as it would allow the user to 
+									input which product they wish to the extract sales data for. <br><br>
+
+									<img src="Parameter.png" alt="Creating a Parameter in Power Query"><br><br>
+
+									The native database query was then altered in Power Query to include the parameter:<br><br>
+
+									<img src="Parametrized native database query.png" alt="Parametrizing the native database query" width="1100" height="400"><br><br>
+
+									With the parametrized native database query complete, the user of the dashboard can alter the value of the parameter to view sales data about the product of their choice.
+									Moreover, depending on the parameter value, the title of the dashboard will change accordingly. Watch the video below to see it in action.<br><br>
+
+									<video width="1100" height="500" controls>
+										<source src="Dashboard Tutorial.mp4" type="video/mp4">
+										
+									</video>
+
+								
+
+
+							 
+									 
+
+								<ul class="actions special">
+									<li><a href="https://app.powerbi.com/view?r=eyJrIjoiZmM0N2MyOTItMmIzYy00OTIyLWJjNGYtNjNhN2I1OWJhZDY1IiwidCI6ImY5NWFmZTIwLTMxZmMtNDZkNy05YTQ1LTg4YzcwMWYzMDdiMSJ9" target="_blank" class="button large">View Power BI Dashboard</a></li>
+								</ul>
+							</section>
+
+					</div>
+
+				<!-- Footer 
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+				-->
+
+				<!-- Copyright 
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+				-->
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
